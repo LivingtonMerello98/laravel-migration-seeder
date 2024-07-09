@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('azienda');
             $table->string('stazione_partenza');
             $table->string('stazione_arrivo');
-            $table->date('data_partenza')->after('orario_arrivo');
             $table->time('orario_partenza');
             $table->time('orario_arrivo');
             $table->string('codice_treno');
@@ -31,10 +30,8 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
-        Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn('data_partenza');
-        });
+        Schema::dropIfExists('trains');
     }
 };
