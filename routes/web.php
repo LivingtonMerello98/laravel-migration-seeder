@@ -16,6 +16,6 @@ use App\Http\Controllers\NextDepartures;
 */
 
 
-Route::get('/', [TrainController::class, 'index']);
+Route::get('/', [TrainController::class, 'index'])->name('departures.today');
 
 Route::get('/next-departures', [NextDepartures::class, 'index'])->name('next.departures');

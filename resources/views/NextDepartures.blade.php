@@ -1,18 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Next Departures</h1>
+@extends('layouts.app')
 
-<ul>
+@section('page-title')
+Prossime Partenze
+@endsection
+
+
+@section('next_departures')
+
+<div class="text-center">
+    <h1>Next Departures</h1>
+</div>
+<div class="col-12 row justify-content-center"> 
     @foreach ($trains as $train)
-        <li>{{ $train->codice_treno }} - Partenza: {{ $train->orario_partenza }}</li>
+        <div class="card mx-3 my-3" style="width: 18rem;">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/240118102613-04-italy-to-slovenia-train.jpg?c=16x9&q=h_653,w_1160,c_fill/f_webp" class="card-img-top" alt="...">
+            <div class="card-body">
+            <p class="card-text">Azienda: <span class="fw-bolder">{{ $train->azienda }}</span></p>
+            <p class="card-text">Codice Treno: <span class="fw-bolder">{{ $train->codice_treno }}</span> </p>
+            <p class="card-text">Data Partenza: <span class="fw-bolder">{{$train->data_partenza->format('d/m/Y')}}</span></p>
+            <a href="#" class="btn btn-primary">dettaglio</a>
+            </div>
+        </div>
     @endforeach
-</ul>
-</body>
-</html>
+</div>
+@endsection
+
+
+

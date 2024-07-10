@@ -11,9 +11,18 @@
 <body>
     @include('shared.header')
     <main>
-        <div class="container py-5">
+
+        <div class="container py-4">
             @yield('departure_trains')
         </div>
+
+        <div class="container py-4">
+            <div class="row">
+                @yield('next_departures')
+            </div>
+        </div>
+
+
     </main>
     @include('shared.footer')
 </body>

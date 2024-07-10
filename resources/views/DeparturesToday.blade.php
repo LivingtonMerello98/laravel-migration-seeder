@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('page-title')
-HomePage
+Treni in partenza oggi
 @endsection
 
 @section('departure_trains')
