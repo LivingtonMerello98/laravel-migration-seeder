@@ -16,11 +16,14 @@ class TrainsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; 0 < 50; $i++) {
+        for ($i = 0; $i < 4; $i++) {
+
+            $data_partenza = $faker->dateTimeBetween('2024-07-08', '2024-07-28')->format('Y-m-d');
+
             Train::create([
                 'azienda' => $faker->company,
                 'stazione_partenza' => $faker->city,
-                'data_partenza' => $faker->date('Y-m-d'),
+                'data_partenza' => $data_partenza,
                 'stazione_arrivo' => $faker->city,
                 'orario_partenza' => $faker->time('H:i:s'),
                 'orario_arrivo' => $faker->time('H:i:s'),
