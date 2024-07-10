@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TrainController;
+use App\Http\Controllers\NextDepartures;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-use App\Http\Controllers\TrainController;
 
 Route::get('/', [TrainController::class, 'index']);
+
+Route::get('/next-departures', [NextDepartures::class, 'index'])->name('next.departures');
