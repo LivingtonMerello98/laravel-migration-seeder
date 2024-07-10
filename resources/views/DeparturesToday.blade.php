@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elenco Treni</title>
-    @vite('resources/js/app.js')
-</head>
-<body>
-    <div class="container">
-        <h1 class="mt-5 mb-4">Treni in Partenza Oggi</h1>
-        
+@extends('layouts.app')
+
+@section('page-title')
+HomePage
+@endsection
+
+@section('departure_trains')
+
+<div class="py-3 text-center">
+    <h1 class="mt-5 mb-4">Treni in Partenza Oggi</h1>
+</div>
         @if ($trains->isEmpty())
             <p>Nessun treno in partenza oggi.</p>
         @else
@@ -48,6 +47,6 @@
                 </table>
             </div>
         @endif
-    </div>
-</body>
-</html>
+
+@endsection
+
