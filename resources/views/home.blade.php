@@ -36,8 +36,8 @@
                                 <td>{{ $train->stazione_partenza }}</td>
                                 <td>{{ $train->data_partenza->format('d-m-Y') }}</td>
                                 <td>{{ $train->stazione_arrivo }}</td>
-                                <td>{{ $train->orario_partenza }}</td>
-                                <td>{{ $train->orario_arrivo }}</td>
+                                <td>{{ $train->orario_partenza->format('H:i:s') }}</td>
+                                <td>{{ $train->orario_arrivo->format('H:i:s') }}</td>
                                 <td>{{ $train->codice_treno }}</td>
                                 <td>{{ $train->numero_carrozze }}</td>
                                 <td>{{ $train->in_orario ? 'Sì' : 'No' }}</td>
