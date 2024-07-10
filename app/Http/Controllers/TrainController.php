@@ -18,4 +18,10 @@ class TrainController extends Controller
 
         return view('DeparturesToday', compact('trains'));
     }
+    public function show($id)
+    {
+        $train = Train::findOrFail($id);
+
+        return view('TrainDetails', compact('train'));
+    }
 }

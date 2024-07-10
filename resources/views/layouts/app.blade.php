@@ -22,6 +22,12 @@
             </div>
         </div>
 
+        <div class="container py-4">
+            <div class="row">
+                @yield('details')
+            </div>
+        </div>
+
 
     </main>
     @include('shared.footer')

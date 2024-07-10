@@ -18,7 +18,7 @@ Prossime Partenze
             <p class="card-text">Company: <span class="fw-bolder">{{ $train->azienda }}</span></p>
             <p class="card-text">Train Code: <span class="fw-bolder">{{ $train->codice_treno }}</span> </p>
             <p class="card-text">Departures Date: <span class="fw-bolder">{{$train->data_partenza->format('d/m/Y')}}</span></p>
-            <a href="#" class="btn btn-primary">details</a>
+            <a href="{{ route('train.details', ['id' => $train->id]) }}" class="btn btn-primary">details</a>
             </div>
         </div>
     @endforeach
