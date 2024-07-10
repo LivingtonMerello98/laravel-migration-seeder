@@ -7,7 +7,7 @@ Treni in partenza oggi
 @section('departure_trains')
 
 <div class="py-3 text-center">
-    <h1 class="mt-5 mb-4">Treni in Partenza Oggi</h1>
+    <h1 class="mt-5 mb-4">Departures Today</h1>
 </div>
         @if ($trains->isEmpty())
             <p>Nessun treno in partenza oggi.</p>
@@ -16,16 +16,17 @@ Treni in partenza oggi
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Azienda</th>
-                            <th>Stazione Partenza</th>
-                            <th>Data Partenza</th>
-                            <th>Stazione Arrivo</th>
-                            <th>Orario Partenza</th>
-                            <th>Orario Arrivo</th>
-                            <th>Codice Treno</th>
-                            <th>Numero Carrozze</th>
-                            <th>In Orario</th>
-                            <th>Cancellato</th>
+                            <th>Company</th>
+                            <th>Departure Station</th>
+                            <th>Departure Date</th>
+                            <th>Arrival Station</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
+                            <th>Train Code</th>
+                            <th>Number of Carriages</th>
+                            <th>On Time</th>
+                            <th>Cancelled</th>
+
                         </tr>
                     </thead>
                     <tbody>
