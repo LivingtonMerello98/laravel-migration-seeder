@@ -20,11 +20,12 @@ class TrainsTableSeeder extends Seeder
             Train::create([
                 'azienda' => $faker->company,
                 'stazione_partenza' => $faker->city,
-                'data_partenza' => $faker->date('Y_m_d'),
+                'data_partenza' => $faker->date('Y-m-d'),
                 'stazione_arrivo' => $faker->city,
-                'orario_arrivo' => $faker->time,
+                'orario_partenza' => $faker->time('H:i:s'),
+                'orario_arrivo' => $faker->time('H:i:s'),
                 'codice_treno' => $faker->numerify('#####'),
-                'numero_carrozze' => $faker->numberBetween(1, 15),
+                'numero_carrozze' => $faker->numberBetween(5, 15),
                 'in_orario' => $faker->boolean,
                 'cancellato' => $faker->boolean,
             ]);
