@@ -16,7 +16,7 @@ class TrainsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i = 0; $i < 4; $i++) {
+        for ($i = 0; $i < 50; $i++) {
 
             $data_partenza = $faker->dateTimeBetween('2024-07-08', '2024-07-28')->format('Y-m-d');
 
